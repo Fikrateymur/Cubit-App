@@ -1,0 +1,18 @@
+{
+    "sourceFile": "lib/constants/settings_row.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1733255447277,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1733255447277,
+            "name": "Commit-0",
+            "content": "import 'package:cubit_example/constants/theme/app_typography.dart';\r\nimport 'package:flutter/material.dart';\r\n\r\nclass SettingsRow extends StatelessWidget {\r\n  const SettingsRow({\r\n    super.key,\r\n    required this.text,\r\n    required this.imageText,\r\n    required this.onTap,\r\n  });\r\n\r\n  final String text;\r\n  final String imageText;\r\n  final GestureTapCallback onTap;\r\n\r\n  @override\r\n  Widget build(BuildContext context) {\r\n    return Container(\r\n      decoration: BoxDecoration(\r\n        color: Colors.white,\r\n        boxShadow: [\r\n          BoxShadow(\r\n            color: Colors.black.withOpacity(0.1),\r\n            blurRadius: 10,\r\n            offset: const Offset(0, 4),\r\n          ),\r\n        ],\r\n      ),\r\n      width: 315,\r\n      height: 86,\r\n      child: GestureDetector(\r\n        onTap: onTap,\r\n        child: Row(\r\n          children: [\r\n            Padding(\r\n              padding: const EdgeInsets.only(left: 23, right: 53),\r\n              child: Image.asset(imageText),\r\n            ),\r\n            Text(\r\n              text,\r\n              style: AppTypography.cartTotal,\r\n            )\r\n          ],\r\n        ),\r\n      ),\r\n    );\r\n  }\r\n}\r\n"
+        }
+    ]
+}

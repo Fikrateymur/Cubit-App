@@ -1,0 +1,30 @@
+{
+    "sourceFile": "lib/cubit/popular_cubit.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 3,
+            "patches": [
+                {
+                    "date": 1733248856197,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1733248884470,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,8 @@\n import 'package:cubit_example/cubit/counter_cubit.dart';\r\n import 'package:cubit_example/data/mock_data.dart';\r\n import 'package:cubit_example/data/product_info.dart';\r\n \r\n-part 'counter_state.dart';\r\n \r\n class CounterCubit extends Cubit<CounterState> {\r\n   CounterCubit()\r\n       : super(CounterState(products: <ProductInfo>[], homefilter: 'All'));\r\n@@ -18,25 +17,6 @@\n           homefilter: 'ALL'),\r\n     );\r\n   }\r\n \r\n-  void porductListTranding() {\r\n-    emit(\r\n-      CounterState(\r\n-          products: products.where((i) => i.isTranding).toList(),\r\n-          homefilter: 'Tranding'),\r\n-    );\r\n-  }\r\n-\r\n-  void porductListAll() {\r\n-    emit(\r\n-      CounterState(products: products, homefilter: 'All'),\r\n-    );\r\n-  }\r\n-\r\n-  void porductListNew() {\r\n-    emit(\r\n-      CounterState(\r\n-          products: products.where((i) => i.isNew).toList(), homefilter: 'New'),\r\n-    );\r\n-  }\r\n+ \r\n }\r\n"
+                },
+                {
+                    "date": 1733248960573,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,10 +4,10 @@\n import 'package:cubit_example/cubit/counter_cubit.dart';\r\n import 'package:cubit_example/data/mock_data.dart';\r\n import 'package:cubit_example/data/product_info.dart';\r\n \r\n-class CounterCubit extends Cubit<CounterState> {\r\n-  CounterCubit()\r\n+class PopularCubit extends Cubit<CounterState> {\r\n+  PopularCubit()\r\n       : super(CounterState(products: <ProductInfo>[], homefilter: 'All'));\r\n \r\n   void porductList() {\r\n     emit(\r\n"
+                },
+                {
+                    "date": 1733249010028,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,10 +4,12 @@\n import 'package:cubit_example/cubit/counter_cubit.dart';\r\n import 'package:cubit_example/data/mock_data.dart';\r\n import 'package:cubit_example/data/product_info.dart';\r\n \r\n-class PopularCubit extends Cubit<CounterState> {\r\n-  PopularCubit()\r\n+part 'counter_state.dart';\r\n+\r\n+class CounterCubit extends Cubit<CounterState> {\r\n+  CounterCubit()\r\n       : super(CounterState(products: <ProductInfo>[], homefilter: 'All'));\r\n \r\n   void porductList() {\r\n     emit(\r\n@@ -15,5 +17,26 @@\n           products: products.where((i) => i.isPopular).toList(),\r\n           homefilter: 'ALL'),\r\n     );\r\n   }\r\n+\r\n+  void porductListTranding() {\r\n+    emit(\r\n+      CounterState(\r\n+          products: products.where((i) => i.isTranding).toList(),\r\n+          homefilter: 'Tranding'),\r\n+    );\r\n+  }\r\n+\r\n+  void porductListAll() {\r\n+    emit(\r\n+      CounterState(products: products, homefilter: 'All'),\r\n+    );\r\n+  }\r\n+\r\n+  void porductListNew() {\r\n+    emit(\r\n+      CounterState(\r\n+          products: products.where((i) => i.isNew).toList(), homefilter: 'New'),\r\n+    );\r\n+  }\r\n }\r\n"
+                }
+            ],
+            "date": 1733248856197,
+            "name": "Commit-0",
+            "content": "// ignore_for_file: depend_on_referenced_packages, unrelated_type_equality_checks\r\n\r\nimport 'package:bloc/bloc.dart';\r\nimport 'package:cubit_example/cubit/counter_cubit.dart';\r\nimport 'package:cubit_example/data/mock_data.dart';\r\nimport 'package:cubit_example/data/product_info.dart';\r\n\r\npart 'counter_state.dart';\r\n\r\nclass CounterCubit extends Cubit<CounterState> {\r\n  CounterCubit()\r\n      : super(CounterState(products: <ProductInfo>[], homefilter: 'All'));\r\n\r\n  void porductList() {\r\n    emit(\r\n      CounterState(\r\n          products: products.where((i) => i.isPopular).toList(),\r\n          homefilter: 'ALL'),\r\n    );\r\n  }\r\n\r\n  void porductListTranding() {\r\n    emit(\r\n      CounterState(\r\n          products: products.where((i) => i.isTranding).toList(),\r\n          homefilter: 'Tranding'),\r\n    );\r\n  }\r\n\r\n  void porductListAll() {\r\n    emit(\r\n      CounterState(products: products, homefilter: 'All'),\r\n    );\r\n  }\r\n\r\n  void porductListNew() {\r\n    emit(\r\n      CounterState(\r\n          products: products.where((i) => i.isNew).toList(), homefilter: 'New'),\r\n    );\r\n  }\r\n}\r\n"
+        }
+    ]
+}

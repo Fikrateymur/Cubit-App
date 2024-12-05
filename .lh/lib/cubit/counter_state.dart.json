@@ -1,0 +1,38 @@
+{
+    "sourceFile": "lib/cubit/counter_state.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 5,
+            "patches": [
+                {
+                    "date": 1732904311897,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1732904338115,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,4 @@\n-class CounterState {}\r\n+class CounterState {\r\n+  CounterState({required this.count});\r\n+  final int count;\r\n+}\r\n"
+                },
+                {
+                    "date": 1732964067959,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +0,0 @@\n-class CounterState {\r\n-  CounterState({required this.count});\r\n-  final int count;\r\n-}\r\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1732964125448,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,4 @@\n-\r\n+class CounterState {\r\n+  CounterState({required this.count});\r\n+  final int count;\r\n+}\r\n"
+                },
+                {
+                    "date": 1732974656248,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,3 @@\n part of 'counter_cubit.dart';\n \n-@immutable\n-sealed class CounterState {}\n-\n-final class CounterInitial extends CounterState {}\n+class CounterState {}\n"
+                },
+                {
+                    "date": 1732974808321,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,5 @@\n part of 'counter_cubit.dart';\n \n-class CounterState {}\n+class CounterState {\n+  int \n+}\n"
+                }
+            ],
+            "date": 1732904311897,
+            "name": "Commit-0",
+            "content": "class CounterState {}"
+        }
+    ]
+}

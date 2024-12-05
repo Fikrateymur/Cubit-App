@@ -1,0 +1,18 @@
+{
+    "sourceFile": "lib/constants/theme/app_colors.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1733153064990,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1733153064990,
+            "name": "Commit-0",
+            "content": "import 'package:flutter/material.dart';\r\n\r\ninterface class AppColors {\r\n  static const baseBrown = Color(0xFF4D5A75);\r\n  static const baseRed = Color(0xFF6E406A);\r\n  static const baseYellow = Color(0xFFCBB4A8);\r\n  static const splashBackgroundColor = Color(0xFFA96AA3);\r\n  static const veryLightGrey = Color(0xFFF7F7F7);\r\n  static const shadowColor = Color.fromRGBO(124, 51, 117, 0.2);\r\n  static const labelColor = Color.fromRGBO(67, 79, 103, 1);\r\n  static const branchLabelColor = Color.fromRGBO(49, 64, 93, 1);\r\n  static const iconDefaultColor = Color.fromRGBO(133, 130, 130, 1);\r\n  static const iconSelectedtColor = Color.fromRGBO(124, 51, 117, 1);\r\n  static const roundedHeart = Color.fromRGBO(255, 255, 255, 0.7);\r\n  static const categoryItem = Color.fromRGBO(131, 78, 127, 1);\r\n  static const productInfo = Color.fromRGBO(129, 129, 129, 1);\r\n  static const favoriteIconBackgroudColor = Color.fromRGBO(231, 235, 240, 1);\r\n}\r\n"
+        }
+    ]
+}

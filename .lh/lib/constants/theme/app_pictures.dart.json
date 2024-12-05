@@ -1,0 +1,18 @@
+{
+    "sourceFile": "lib/constants/theme/app_pictures.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1733153533294,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1733153533294,
+            "name": "Commit-0",
+            "content": "class AppPictures {\r\n  static const splashPicture = 'assets/pictures/Group266.png';\r\n  static const iconShirtPicture = 'assets/pictures/Vector.png';\r\n  static const iconShirtPicture2 = 'assets/pictures/Vector1.png';\r\n  static const iconHeart = 'assets/pictures/VectorHeart.png';\r\n  static const iconSelectedHeart = 'assets/pictures/VectorHeartSelected.png';\r\n  static const iconSelectedMarketCard =\r\n      'assets/pictures/MarketCardSelected.png';\r\n  static const iconMarketCard = 'assets/pictures/MarketCard.png';\r\n  static const iconDrawer = 'assets/pictures/Group232.png';\r\n  static const redTshirt = 'assets/pictures/image25.png';\r\n  static const rozviyTshirt = 'assets/pictures/image36.png';\r\n  static const geryTshirt = 'assets/pictures/image34.png';\r\n  static const whiteTshirt = 'assets/pictures/image26.png';\r\n  static const menuIcon = 'assets/pictures/menuIcon.png';\r\n  static const aboutUs = 'assets/pictures/Rectangle238.png';\r\n  static const firstGrid = 'assets/pictures/first_grid.png';\r\n  static const secondGrid = 'assets/pictures/second_grid.png';\r\n  static const thirddGrid = 'assets/pictures/third_grid.png';\r\n  static const fourthGrid = 'assets/pictures/fourth_grid.png';\r\n  static const fifthGrid = 'assets/pictures/fifth_grid.png';\r\n  static const sixthGrid = 'assets/pictures/sixth_grid.png';\r\n  static const product = 'assets/pictures/Product.png';\r\n  static const productImage = 'assets/pictures/Group187.png';\r\n  static const filledHeart = 'assets/pictures/Icon.png';\r\n}\r\n"
+        }
+    ]
+}

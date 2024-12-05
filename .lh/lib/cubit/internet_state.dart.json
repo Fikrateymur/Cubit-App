@@ -1,0 +1,70 @@
+{
+    "sourceFile": "lib/cubit/internet_state.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 13,
+            "patches": [
+                {
+                    "date": 1733060753055,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1733060759334,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,9 @@\n part of 'internet_cubit.dart';\n \n-enum ConnectionType{\n-  \n+enum ConnectionType {\n+  Wifi,\n+  Mobile,\n }\n \n @immutable\n sealed class InternetState {}\n"
+                },
+                {
+                    "date": 1733060772020,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,11 @@\n+part of 'internet_cubit.dart';\n+\n+enum ConnectionType {\n+  wifi,\n+  mobile,\n+}\n+\n+@immutable\n+sealed class InternetState {}\n+\n+final class InternetInitial extends InternetState {}\n"
+                },
+                {
+                    "date": 1733060812326,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,22 +1,6 @@\n part of 'internet_cubit.dart';\n \n-enum ConnectionType {\n-  wifi,\n-  mobile,\n-}\n-\n @immutable\n sealed class InternetState {}\n \n final class InternetInitial extends InternetState {}\n-part of 'internet_cubit.dart';\n-\n-enum ConnectionType {\n-  Wifi,\n-  Mobile,\n-}\n-\n-@immutable\n-sealed class InternetState {}\n-\n-final class InternetInitial extends InternetState {}\n"
+                },
+                {
+                    "date": 1733060838522,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,4 +3,8 @@\n @immutable\n sealed class InternetState {}\n \n final class InternetInitial extends InternetState {}\n+\n+final class InternetInitial extends InternetState {}\n+\n+final class InternetInitial extends InternetState {}\n"
+                },
+                {
+                    "date": 1733060852473,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,7 +4,7 @@\n sealed class InternetState {}\n \n final class InternetInitial extends InternetState {}\n \n-final class InternetInitial extends InternetState {}\n+final class InternetConnected extends InternetState {}\n \n-final class InternetInitial extends InternetState {}\n+final class InternetDisConnected extends InternetState {}\n"
+                },
+                {
+                    "date": 1733060914767,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,12 @@\n+part of 'internet_cubit.dart';\n+\n+@immutable\n+sealed class InternetState {}\n+\n+final class InternetInitial extends InternetState {}\n+\n+final class InternetConnected extends InternetState {\n+  class \n+}\n+\n+final class InternetDisConnected extends InternetState {}\n"
+                },
+                {
+                    "date": 1733060922842,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,18 +5,8 @@\n \n final class InternetInitial extends InternetState {}\n \n final class InternetConnected extends InternetState {\n-  class \n+  class Int\n }\n \n final class InternetDisConnected extends InternetState {}\n-part of 'internet_cubit.dart';\n-\n-@immutable\n-sealed class InternetState {}\n-\n-final class InternetInitial extends InternetState {}\n-\n-final class InternetConnected extends InternetState {}\n-\n-final class InternetDisConnected extends InternetState {}\n"
+                },
+                {
+                    "date": 1733060928009,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,12 @@\n+part of 'internet_cubit.dart';\n+\n+@immutable\n+sealed class InternetState {}\n+\n+final class InternetInitial extends InternetState {}\n+\n+final class InternetConnected extends InternetState {\n+  class InternetConnected\n+}\n+\n+final class InternetDisConnected extends InternetState {}\n"
+                },
+                {
+                    "date": 1733060940200,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,21 +4,7 @@\n sealed class InternetState {}\n \n final class InternetInitial extends InternetState {}\n \n-final class InternetConnected extends InternetState {\n-  class InternetConnected\n-}\n+final class InternetConnected extends InternetState {}\n \n final class InternetDisConnected extends InternetState {}\n-part of 'internet_cubit.dart';\n-\n-@immutable\n-sealed class InternetState {}\n-\n-final class InternetInitial extends InternetState {}\n-\n-final class InternetConnected extends InternetState {\n-  class Int\n-}\n-\n-final class InternetDisConnected extends InternetState {}\n"
+                },
+                {
+                    "date": 1733060970012,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,7 +4,9 @@\n sealed class InternetState {}\n \n final class InternetInitial extends InternetState {}\n \n-final class InternetConnected extends InternetState {}\n+final class InternetConnected extends InternetState {\n+  final ConnectionType connectionType;\n+}\n \n final class InternetDisConnected extends InternetState {}\n"
+                },
+                {
+                    "date": 1733060990520,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,8 +5,9 @@\n \n final class InternetInitial extends InternetState {}\n \n final class InternetConnected extends InternetState {\n+  InternetConnected({required this.connectionType});\n   final ConnectionType connectionType;\n }\n \n final class InternetDisConnected extends InternetState {}\n"
+                },
+                {
+                    "date": 1733070317993,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \n @immutable\n sealed class InternetState {}\n \n-final class InternetInitial extends InternetState {}\n+final class InternetLoading extends InternetState {}\n \n final class InternetConnected extends InternetState {\n   InternetConnected({required this.connectionType});\n   final ConnectionType connectionType;\n"
+                },
+                {
+                    "date": 1733084842646,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,13 +1,1 @@\n-part of 'internet_cubit.dart';\n \n-@immutable\n-sealed class InternetState {}\n-\n-final class InternetLoading extends InternetState {}\n-\n-final class InternetConnected extends InternetState {\n-  InternetConnected({required this.connectionType});\n-  final ConnectionType connectionType;\n-}\n-\n-final class InternetDisConnected extends InternetState {}\n"
+                }
+            ],
+            "date": 1733060753055,
+            "name": "Commit-0",
+            "content": "part of 'internet_cubit.dart';\n\nenum ConnectionType{\n  \n}\n\n@immutable\nsealed class InternetState {}\n\nfinal class InternetInitial extends InternetState {}\n"
+        }
+    ]
+}

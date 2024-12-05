@@ -1,0 +1,46 @@
+{
+    "sourceFile": "lib/cubit/type_cubit.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 7,
+            "patches": [
+                {
+                    "date": 1733258684965,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1733258691284,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n import 'package:bloc/bloc.dart';\n import 'package:meta/meta.dart';\n \n-part 'cubit/type_state.dart';\n+part 'type_state.dart';\n \n class TypeCubit extends Cubit<TypeState> {\n   TypeCubit() : super(TypeInitial());\n }\n"
+                },
+                {
+                    "date": 1733258716597,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,6 +3,6 @@\n \n part 'type_state.dart';\n \n class TypeCubit extends Cubit<TypeState> {\n-  TypeCubit() : super(TypeInitial());\n+  TypeCubit() : super(TypeState());\n }\n"
+                },
+                {
+                    "date": 1733258764665,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,6 @@\n import 'package:bloc/bloc.dart';\n+import 'package:cubit_example/data/product_info.dart';\n import 'package:meta/meta.dart';\n \n part 'type_state.dart';\n \n"
+                },
+                {
+                    "date": 1733258779187,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,6 +4,6 @@\n \n part 'type_state.dart';\n \n class TypeCubit extends Cubit<TypeState> {\n-  TypeCubit() : super(TypeState());\n+  TypeCubit() : super(TypeState(products: <ProductInfo>[], homefilter: 'All'));\n }\n"
+                },
+                {
+                    "date": 1733258862382,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,6 @@\n import 'package:bloc/bloc.dart';\n import 'package:cubit_example/data/product_info.dart';\n-import 'package:meta/meta.dart';\n \n part 'type_state.dart';\n \n class TypeCubit extends Cubit<TypeState> {\n"
+                },
+                {
+                    "date": 1733258927034,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,6 @@\n import 'package:bloc/bloc.dart';\n+import 'package:cubit_example/data/mock_data.dart';\n import 'package:cubit_example/data/product_info.dart';\n \n part 'type_state.dart';\n \n@@ -7,5 +8,26 @@\n   TypeCubit()\n       : super(\n           TypeState(products: <ProductInfo>[], homefilter: 'All'),\n         );\n+\n+        void porductListTranding() {\n+    emit(\n+      TypeState(\n+          products: products.where((i) => i.isTranding).toList(),\n+          homefilter: 'Tranding'),\n+    );\n+  }\n+\n+  void porductListAll() {\n+    emit(\n+      TypeState(products: products, homefilter: 'All'),\n+    );\n+  }\n+\n+  void porductListNew() {\n+    emit(\n+      TypeState(\n+          products: products.where((i) => i.isNew).toList(), homefilter: 'New'),\n+    );\n+  }\n }\n"
+                },
+                {
+                    "date": 1733258987301,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,13 +9,13 @@\n       : super(\n           TypeState(products: <ProductInfo>[], homefilter: 'All'),\n         );\n \n-  void porductListTranding() {\n+  void porductListBoys() {\n     emit(\n       TypeState(\n           products: products.where((i) => i.isTranding).toList(),\n-          homefilter: 'Tranding'),\n+          homefilter: 'Boys'),\n     );\n   }\n \n   void porductListAll() {\n@@ -23,11 +23,11 @@\n       TypeState(products: products, homefilter: 'All'),\n     );\n   }\n \n-  void porductListNew() {\n+  void porductListGirls() {\n     emit(\n       TypeState(\n-          products: products.where((i) => i.isNew).toList(), homefilter: 'New'),\n+          products: products.where((i) => i.isNew).toList(), homefilter: 'Girls'),\n     );\n   }\n }\n"
+                }
+            ],
+            "date": 1733258684965,
+            "name": "Commit-0",
+            "content": "import 'package:bloc/bloc.dart';\nimport 'package:meta/meta.dart';\n\npart 'cubit/type_state.dart';\n\nclass TypeCubit extends Cubit<TypeState> {\n  TypeCubit() : super(TypeInitial());\n}\n"
+        }
+    ]
+}

@@ -1,0 +1,42 @@
+{
+    "sourceFile": "lib/cubit/favorite_cubit.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 6,
+            "patches": [
+                {
+                    "date": 1733260407161,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1733260416062,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,6 +4,6 @@\n \n part 'favorite_state.dart';\n \n class FavoriteCubit extends Cubit<FavoriteState> {\n-  FavoriteCubit() : super(FavoriteInitial());\n+  FavoriteCubit() : super(FavoriteState());\n }\n"
+                },
+                {
+                    "date": 1733260573727,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,6 +4,6 @@\n \n part 'favorite_state.dart';\n \n class FavoriteCubit extends Cubit<FavoriteState> {\n-  FavoriteCubit() : super(FavoriteState());\n+  FavoriteCubit() : super(FavoriteState(favorites: ));\n }\n"
+                },
+                {
+                    "date": 1733260838932,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,6 +4,6 @@\n \n part 'favorite_state.dart';\n \n class FavoriteCubit extends Cubit<FavoriteState> {\n-  FavoriteCubit() : super(FavoriteState(favorites: ));\n+  FavoriteCubit() : super(FavoriteState(favorites: <ProductInfo>[],),);\n }\n"
+                },
+                {
+                    "date": 1733260853969,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,6 @@\n import 'package:bloc/bloc.dart';\n import 'package:cubit_example/data/product_info.dart';\n-import 'package:meta/meta.dart';\n \n part 'favorite_state.dart';\n \n class FavoriteCubit extends Cubit<FavoriteState> {\n"
+                },
+                {
+                    "date": 1733260914090,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,5 +9,7 @@\n           FavoriteState(\n             favorites: <ProductInfo>[],\n           ),\n         );\n+\n+        void addToFavorites\n }\n"
+                },
+                {
+                    "date": 1733260940497,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,6 +10,6 @@\n             favorites: <ProductInfo>[],\n           ),\n         );\n \n-        void addToFavorites\n+        void addToFavorites(ProductInfo favoriteProduct)  \n }\n"
+                }
+            ],
+            "date": 1733260407161,
+            "name": "Commit-0",
+            "content": "import 'package:bloc/bloc.dart';\nimport 'package:cubit_example/data/product_info.dart';\nimport 'package:meta/meta.dart';\n\npart 'favorite_state.dart';\n\nclass FavoriteCubit extends Cubit<FavoriteState> {\n  FavoriteCubit() : super(FavoriteInitial());\n}\n"
+        }
+    ]
+}

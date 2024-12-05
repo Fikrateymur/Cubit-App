@@ -1,0 +1,18 @@
+{
+    "sourceFile": "lib/constants/drawer_row.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1733253347667,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1733253347667,
+            "name": "Commit-0",
+            "content": "import 'package:cubit_example/constants/theme/app_colors.dart';\r\nimport 'package:cubit_example/constants/theme/app_typography.dart';\r\nimport 'package:flutter/material.dart';\r\n\r\nclass DrawerRow extends StatelessWidget {\r\n  const DrawerRow(\r\n      {super.key,\r\n      required this.icon,\r\n      required this.text,\r\n      this.languageCode,\r\n      required this.height,\r\n      required this.padding,\r\n      this.onTap});\r\n  final Icon icon;\r\n  final String text;\r\n  final double height;\r\n  final String? languageCode;\r\n  final double padding;\r\n  final void Function()? onTap;\r\n\r\n  @override\r\n  Widget build(BuildContext context) {\r\n    return Container(\r\n      color: Colors.white,\r\n      height: height,\r\n      child: Padding(\r\n        padding: EdgeInsets.symmetric(horizontal: padding),\r\n        child: GestureDetector(\r\n          onTap: onTap,\r\n          child: Row(\r\n            mainAxisAlignment: MainAxisAlignment.spaceBetween,\r\n            children: [\r\n              icon,\r\n              Text(\r\n                text,\r\n                style: AppTypography.drawerLabelText,\r\n              ),\r\n              Text(\r\n                languageCode ?? '  ',\r\n                style: const TextStyle(\r\n                  color: AppColors.iconSelectedtColor,\r\n                ),\r\n              ),\r\n            ],\r\n          ),\r\n        ),\r\n      ),\r\n    );\r\n  }\r\n}\r\n"
+        }
+    ]
+}

@@ -1,0 +1,18 @@
+{
+    "sourceFile": "lib/constants/location_row.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1733253774117,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1733253774117,
+            "name": "Commit-0",
+            "content": "import 'package:cubit_example/constants/theme/app_colors.dart';\r\nimport 'package:cubit_example/constants/theme/app_typography.dart';\r\nimport 'package:flutter/material.dart';\r\n\r\nclass LocationRow extends StatelessWidget {\r\n  const LocationRow({\r\n    super.key,\r\n    required this.adress,\r\n    required this.number_1,\r\n    required this.number_2,\r\n  });\r\n\r\n  final String adress;\r\n  final String number_1;\r\n  final String number_2;\r\n\r\n  @override\r\n  Widget build(BuildContext context) {\r\n    return Container(\r\n      decoration: const BoxDecoration(\r\n        boxShadow: [\r\n          BoxShadow(\r\n            blurRadius: 3,\r\n            color: AppColors.shadowColor,\r\n            spreadRadius: 0,\r\n          )\r\n        ],\r\n        color: Colors.white,\r\n        borderRadius: BorderRadius.all(\r\n          Radius.circular(6.21),\r\n        ),\r\n      ),\r\n      width: 313,\r\n      height: 93,\r\n      child: Column(\r\n        mainAxisAlignment: MainAxisAlignment.center,\r\n        children: [\r\n          Row(\r\n            mainAxisAlignment: MainAxisAlignment.center,\r\n            children: [\r\n              Text(\r\n                adress,\r\n                style: AppTypography.aboutUsText,\r\n              )\r\n            ],\r\n          ),\r\n          const SizedBox(height: 16),\r\n          Row(\r\n            mainAxisAlignment: MainAxisAlignment.center,\r\n            children: [\r\n              Text(\r\n                number_1,\r\n                style: AppTypography.branchNumberText,\r\n              ),\r\n              const SizedBox(width: 40),\r\n              Text(\r\n                number_2,\r\n                style: AppTypography.branchNumberText,\r\n              )\r\n            ],\r\n          ),\r\n        ],\r\n      ),\r\n    );\r\n  }\r\n}\r\n"
+        }
+    ]
+}

@@ -1,0 +1,18 @@
+{
+    "sourceFile": "lib/constants/chosing_button.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1733254965902,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1733254965902,
+            "name": "Commit-0",
+            "content": "import 'package:flutter/material.dart';\r\n\r\nclass ChosingButton extends StatefulWidget {\r\n  const ChosingButton({\r\n    super.key,\r\n    required this.text,\r\n    required this.onTap,\r\n    required this.color,\r\n  });\r\n\r\n  final Widget text;\r\n  final GestureTapCallback onTap;\r\n  final Color color;\r\n\r\n  @override\r\n  State<ChosingButton> createState() => _ChosingButtonState();\r\n}\r\n\r\nclass _ChosingButtonState extends State<ChosingButton> {\r\n  @override\r\n  Widget build(BuildContext context) {\r\n    return GestureDetector(\r\n      onTap: widget.onTap,\r\n      child: Padding(\r\n        padding: const EdgeInsets.only(top: 16, right: 32),\r\n        child: Container(\r\n          alignment: Alignment.topRight,\r\n          child: Container(\r\n            height: 37,\r\n            width: 37,\r\n            decoration: BoxDecoration(\r\n              color: widget.color,\r\n              borderRadius: const BorderRadius.all(\r\n                Radius.circular(23),\r\n              ),\r\n            ),\r\n            child: Center(\r\n              child: widget.text,\r\n            ),\r\n          ),\r\n        ),\r\n      ),\r\n    );\r\n  }\r\n}\r\n"
+        }
+    ]
+}

@@ -1,0 +1,18 @@
+{
+    "sourceFile": "lib/constants/container_dresses.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1733167621868,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1733167621868,
+            "name": "Commit-0",
+            "content": "import 'package:cubit_example/constants/theme/app_colors.dart';\r\nimport 'package:flutter/material.dart';\r\n\r\nclass ContainerDresses extends StatelessWidget {\r\n  const ContainerDresses({\r\n    super.key,\r\n    required this.image,\r\n    required this.height,\r\n    required this.width,\r\n  });\r\n\r\n  final String image;\r\n  final double width;\r\n  final double height;\r\n\r\n  @override\r\n  Widget build(BuildContext context) {\r\n    return Container(\r\n        width: width,\r\n        height: height,\r\n        decoration: BoxDecoration(\r\n          color: Colors.white,\r\n          borderRadius: BorderRadius.circular(10),\r\n          boxShadow: const [\r\n            BoxShadow(\r\n              blurRadius: 3,\r\n              color: AppColors.shadowColor,\r\n              spreadRadius: 0,\r\n            )\r\n          ],\r\n        ),\r\n        child: Image.asset(image));\r\n  }\r\n}\r\n"
+        }
+    ]
+}

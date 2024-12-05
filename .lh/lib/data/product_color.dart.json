@@ -1,0 +1,18 @@
+{
+    "sourceFile": "lib/data/product_color.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1733155206339,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1733155206339,
+            "name": "Commit-0",
+            "content": "\r\nimport 'package:flutter/material.dart';\r\n\r\nclass ColorChoosed {\r\n  ColorChoosed({\r\n    required this.color,\r\n    required this.name,\r\n  });\r\n  Color color;\r\n  String name;\r\n}\r\n\r\nList<ColorChoosed> productColors = [\r\n  ColorChoosed(\r\n    color: Colors.amber,\r\n    name: 'Amber',\r\n  ),\r\n  ColorChoosed(\r\n    color: Colors.red,\r\n    name: 'Red',\r\n  ),\r\n  ColorChoosed(\r\n    color: Colors.brown,\r\n    name: 'Brown',\r\n  ),\r\n  ColorChoosed(\r\n    color: Colors.blue,\r\n    name: 'Blue',\r\n  ),\r\n];"
+        }
+    ]
+}

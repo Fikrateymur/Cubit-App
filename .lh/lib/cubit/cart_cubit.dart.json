@@ -1,0 +1,34 @@
+{
+    "sourceFile": "lib/cubit/cart_cubit.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 4,
+            "patches": [
+                {
+                    "date": 1733344762919,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1733344781592,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,6 +4,6 @@\n \n part 'cart_state.dart';\n \n class CartCubit extends Cubit<CartState> {\n-  CartCubit() : super(CartInitial());\n+  CartCubit() : super(CartState(favorites: ));\n }\n"
+                },
+                {
+                    "date": 1733344803307,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,6 +4,6 @@\n \n part 'cart_state.dart';\n \n class CartCubit extends Cubit<CartState> {\n-  CartCubit() : super(CartState(favorites: ));\n+  CartCubit() : super(CartState(favorites: <CartInfo>[],));\n }\n"
+                },
+                {
+                    "date": 1733344818889,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,5 +8,17 @@\n   CartCubit()\n       : super(CartState(\n           favorites: <CartInfo>[],\n         ));\n+\n+          void addToFavorites(ProductInfo favoriteProduct) {\n+    emit(\n+      FavoriteState(\n+          favorites: state.favorites..add(favoriteProduct), onPressed: true),\n+    );\n+  }\n+\n+  void removeFromFavorites(ProductInfo favoriteProduct) {\n+    emit(FavoriteState(\n+        favorites: state.favorites..remove(favoriteProduct), onPressed: false));\n+  }\n }\n"
+                },
+                {
+                    "date": 1733344895766,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,16 +9,16 @@\n       : super(CartState(\n           favorites: <CartInfo>[],\n         ));\n \n-  void addToFavorites(ProductInfo favoriteProduct) {\n+  void addToCart(CartInfo cartProduct) {\n     emit(\n-      FavoriteState(\n-          favorites: state.favorites..add(favoriteProduct), onPressed: true),\n+      CartState(\n+          favorites: state.favorites..add(cartProduct)),\n     );\n   }\n \n-  void removeFromFavorites(ProductInfo favoriteProduct) {\n-    emit(FavoriteState(\n-        favorites: state.favorites..remove(favoriteProduct), onPressed: false));\n+  void removeFromCart(CartInfo cartProduct) {\n+    emit(CartState(\n+        favorites: state.favorites..remove(cartProduct)));\n   }\n }\n"
+                }
+            ],
+            "date": 1733344762919,
+            "name": "Commit-0",
+            "content": "import 'package:bloc/bloc.dart';\nimport 'package:cubit_example/data/cart_info.dart';\nimport 'package:meta/meta.dart';\n\npart 'cart_state.dart';\n\nclass CartCubit extends Cubit<CartState> {\n  CartCubit() : super(CartInitial());\n}\n"
+        }
+    ]
+}

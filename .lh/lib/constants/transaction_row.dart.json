@@ -1,0 +1,18 @@
+{
+    "sourceFile": "lib/constants/transaction_row.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1733255553009,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1733255553009,
+            "name": "Commit-0",
+            "content": "import 'package:cubit_example/constants/theme/app_typography.dart';\r\nimport 'package:flutter/material.dart';\r\n\r\nclass TransactionRow extends StatelessWidget {\r\n  const TransactionRow({\r\n    super.key,\r\n    required this.text,\r\n    required this.number,\r\n    // required this.onTap,\r\n    required this.date,\r\n  });\r\n\r\n  final String text;\r\n  final String number;\r\n  // final GestureTapCallback onTap;\r\n  final String date;\r\n\r\n  @override\r\n  Widget build(BuildContext context) {\r\n    return Container(\r\n      decoration: BoxDecoration(\r\n        color: Colors.white,\r\n        boxShadow: [\r\n          BoxShadow(\r\n            color: Colors.black.withOpacity(0.1),\r\n            blurRadius: 10,\r\n            offset: const Offset(0, 4),\r\n          ),\r\n        ],\r\n      ),\r\n      width: 330,\r\n      height: 86,\r\n      child: Row(\r\n        children: [\r\n          Padding(\r\n            padding: const EdgeInsets.only(left: 23, right: 53),\r\n            child: Text(\r\n              number,\r\n              style: AppTypography.number,\r\n            ),\r\n          ),\r\n          Column(\r\n            mainAxisAlignment: MainAxisAlignment.center,\r\n            children: [\r\n              Text(\r\n                text,\r\n                style: AppTypography.favoriteProductName,\r\n              ),\r\n              Text(\r\n                'Date: $date',\r\n                style: AppTypography.favoriteColor,\r\n              )\r\n            ],\r\n          ),\r\n        ],\r\n      ),\r\n    );\r\n  }\r\n}\r\n"
+        }
+    ]
+}

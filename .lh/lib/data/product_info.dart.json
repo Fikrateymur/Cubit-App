@@ -1,0 +1,22 @@
+{
+    "sourceFile": "lib/data/product_info.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1733155138542,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1733155213664,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-import 'package:e_commerce/data/mock_data.dart';\r\n+import 'package:cubit_example/data/product_color.dart';\r\n \r\n class ProductInfo {\r\n   int id;\r\n   String name;\r\n"
+                }
+            ],
+            "date": 1733155138542,
+            "name": "Commit-0",
+            "content": "import 'package:e_commerce/data/mock_data.dart';\r\n\r\nclass ProductInfo {\r\n  int id;\r\n  String name;\r\n  double price;\r\n  String imagePath;\r\n  String type;\r\n  bool isTranding;\r\n  bool isNew;\r\n  bool isPopular;\r\n  ColorChoosed? selectedColor;\r\n  ProductInfo({\r\n    this.selectedColor,\r\n    required this.id,\r\n    required this.name,\r\n    required this.price,\r\n    required this.imagePath,\r\n    required this.type,\r\n    required this.isTranding,\r\n    required this.isNew,\r\n    required this.isPopular,\r\n  });\r\n}\r\n"
+        }
+    ]
+}

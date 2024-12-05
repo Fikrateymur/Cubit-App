@@ -1,0 +1,26 @@
+{
+    "sourceFile": "lib/constants/button_drawer.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1733253059521,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1733253137118,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,57 @@\n+import 'package:cubit_example/constants/drawer_page.dart';\r\n+import 'package:cubit_example/constants/theme/app_colors.dart';\r\n+import 'package:flutter/material.dart';\r\n+\r\n+class ButtonDrawer extends StatelessWidget {\r\n+  const ButtonDrawer({super.key});\r\n+\r\n+  @override\r\n+  Widget build(BuildContext context) {\r\n+    return GestureDetector(\r\n+      onTap: () => Navigator.push(\r\n+        context,\r\n+        PageRouteBuilder(\r\n+            pageBuilder: (context, animation, secondaryAnimation) =>\r\n+                const DrawerPage(),\r\n+            transitionsBuilder:\r\n+                (context, animation, secondaryAnimation, child) {\r\n+              return SlideTransition(\r\n+                position: Tween<Offset>(\r\n+                  begin: const Offset(-1.0, 0.0),\r\n+                  end: Offset.zero,\r\n+                ).animate(animation),\r\n+                child: SlideTransition(\r\n+                  position: Tween<Offset>(\r\n+                    begin: Offset.zero,\r\n+                    end: const Offset(-1.0, 0.0),\r\n+                  ).animate(secondaryAnimation),\r\n+                  child: child,\r\n+                ),\r\n+              );\r\n+            },\r\n+            transitionDuration: const Duration(milliseconds: 600)),\r\n+      ),\r\n+      child: Container(\r\n+        decoration: const BoxDecoration(\r\n+          shape: BoxShape.circle,\r\n+          boxShadow: [\r\n+            BoxShadow(\r\n+              blurRadius: 3,\r\n+              color: AppColors.shadowColor,\r\n+              spreadRadius: 0,\r\n+            )\r\n+          ],\r\n+        ),\r\n+        child: const CircleAvatar(\r\n+          backgroundColor: Colors.white,\r\n+          radius: 21,\r\n+          child: Icon(\r\n+            color: AppColors.iconSelectedtColor,\r\n+            Icons.menu,\r\n+            size: 24,\r\n+          ),\r\n+        ),\r\n+      ),\r\n+    );\r\n+  }\r\n+}\r\n"
+                },
+                {
+                    "date": 1733253195688,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-import 'package:cubit_example/constants/drawer_page.dart';\r\n+import 'package:cubit_example/presentation/screens/drawer_page.dart';\r\n import 'package:cubit_example/constants/theme/app_colors.dart';\r\n import 'package:flutter/material.dart';\r\n \r\n class ButtonDrawer extends StatelessWidget {\r\n"
+                }
+            ],
+            "date": 1733253059521,
+            "name": "Commit-0",
+            "content": "import 'package:e_commerce/pages/drawer_page.dart';\r\nimport 'package:e_commerce/theme/app_colors.dart';\r\nimport 'package:flutter/material.dart';\r\n\r\nclass ButtonDrawer extends StatelessWidget {\r\n  const ButtonDrawer({super.key});\r\n\r\n  @override\r\n  Widget build(BuildContext context) {\r\n    return GestureDetector(\r\n      onTap: () => Navigator.push(\r\n        context,\r\n        PageRouteBuilder(\r\n            pageBuilder: (context, animation, secondaryAnimation) =>\r\n                const DrawerPage(),\r\n            transitionsBuilder:\r\n                (context, animation, secondaryAnimation, child) {\r\n              return SlideTransition(\r\n                position: Tween<Offset>(\r\n                  begin: const Offset(-1.0, 0.0),\r\n                  end: Offset.zero,\r\n                ).animate(animation),\r\n                child: SlideTransition(\r\n                  position: Tween<Offset>(\r\n                    begin: Offset.zero,\r\n                    end: const Offset(-1.0, 0.0),\r\n                  ).animate(secondaryAnimation),\r\n                  child: child,\r\n                ),\r\n              );\r\n            },\r\n            transitionDuration: const Duration(milliseconds: 600)),\r\n      ),\r\n      child: Container(\r\n        decoration: const BoxDecoration(\r\n          shape: BoxShape.circle,\r\n          boxShadow: [\r\n            BoxShadow(\r\n              blurRadius: 3,\r\n              color: AppColors.shadowColor,\r\n              spreadRadius: 0,\r\n            )\r\n          ],\r\n        ),\r\n        child: const CircleAvatar(\r\n          backgroundColor: Colors.white,\r\n          radius: 21,\r\n          child: Icon(\r\n            color: AppColors.iconSelectedtColor,\r\n            Icons.menu,\r\n            size: 24,\r\n          ),\r\n        ),\r\n      ),\r\n    );\r\n  }\r\n}\r\n"
+        }
+    ]
+}

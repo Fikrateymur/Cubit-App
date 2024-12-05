@@ -1,0 +1,18 @@
+{
+    "sourceFile": "lib/constants/like_button.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1733254735814,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1733254735814,
+            "name": "Commit-0",
+            "content": "import 'package:flutter/material.dart';\r\n\r\nclass LikeButton extends StatefulWidget {\r\n  const LikeButton({\r\n    super.key,\r\n    required this.likeImage,\r\n    required this.color,\r\n    required this.onTap,\r\n  });\r\n\r\n  final ImageProvider likeImage;\r\n  final Color color;\r\n  final Function()? onTap;\r\n\r\n  @override\r\n  State<LikeButton> createState() => _LikeButtonState();\r\n}\r\n\r\nclass _LikeButtonState extends State<LikeButton> {\r\n  @override\r\n  Widget build(BuildContext context) {\r\n    return GestureDetector(\r\n      onTap: widget.onTap,\r\n      child: Padding(\r\n        padding: const EdgeInsets.only(top: 16, right: 32),\r\n        child: Container(\r\n          alignment: Alignment.topRight,\r\n          child: Container(\r\n            height: 37,\r\n            width: 37,\r\n            decoration: BoxDecoration(\r\n              color: widget.color,\r\n              borderRadius: const BorderRadius.all(\r\n                Radius.circular(18.38),\r\n              ),\r\n            ),\r\n            child: Image(\r\n              image: widget.likeImage,\r\n              // width: 20,\r\n              // height: 15,\r\n            ),\r\n          ),\r\n        ),\r\n      ),\r\n    );\r\n  }\r\n}\r\n"
+        }
+    ]
+}

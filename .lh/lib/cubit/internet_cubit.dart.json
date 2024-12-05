@@ -1,0 +1,46 @@
+{
+    "sourceFile": "lib/cubit/internet_cubit.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 7,
+            "patches": [
+                {
+                    "date": 1733060974422,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1733070288321,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,6 +4,6 @@\n \n part 'internet_state.dart';\n \n class InternetCubit extends Cubit<InternetState> {\n-  InternetCubit() : super(InternetInitial());\n+  InternetCubit() : super(InternetLo());\n }\n"
+                },
+                {
+                    "date": 1733070322996,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,6 +4,6 @@\n \n part 'internet_state.dart';\n \n class InternetCubit extends Cubit<InternetState> {\n-  InternetCubit() : super(InternetLo());\n+  InternetCubit() : super(InternetLoading());\n }\n"
+                },
+                {
+                    "date": 1733070343028,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,6 @@\n+// ignore_for_file: depend_on_referenced_packages\n+\n import 'package:bloc/bloc.dart';\n import 'package:cubit_example/constants/enums.dart';\n import 'package:meta/meta.dart';\n \n"
+                },
+                {
+                    "date": 1733070381475,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,13 @@\n+// ignore_for_file: depend_on_referenced_packages\n+\n+import 'package:bloc/bloc.dart';\n+import 'package:cubit_example/constants/enums.dart';\n+import 'package:meta/meta.dart';\n+\n+part 'internet_state.dart';\n+\n+class InternetCubit extends Cubit<InternetState> {\n+  InternetCubit() : super(InternetLoading());\n+\n+  void \n+}\n"
+                },
+                {
+                    "date": 1733070394007,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,13 @@\n+// ignore_for_file: depend_on_referenced_packages\n+\n+import 'package:bloc/bloc.dart';\n+import 'package:cubit_example/constants/enums.dart';\n+import 'package:meta/meta.dart';\n+\n+part 'internet_state.dart';\n+\n+class InternetCubit extends Cubit<InternetState> {\n+  InternetCubit() : super(InternetLoading());\n+\n+  void emitInternetConnected\n+}\n"
+                },
+                {
+                    "date": 1733070400989,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,6 +8,6 @@\n \n class InternetCubit extends Cubit<InternetState> {\n   InternetCubit() : super(InternetLoading());\n \n-  void emitInternetConnected()\n+  void emitInternetConnected(ConnectionType)\n }\n"
+                },
+                {
+                    "date": 1733070414224,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,6 +8,6 @@\n \n class InternetCubit extends Cubit<InternetState> {\n   InternetCubit() : super(InternetLoading());\n \n-  void emitInternetConnected(ConnectionType)\n+  void emitInternetConnected(ConnectionType _connection)\n }\n"
+                }
+            ],
+            "date": 1733060974422,
+            "name": "Commit-0",
+            "content": "import 'package:bloc/bloc.dart';\nimport 'package:cubit_example/constants/enums.dart';\nimport 'package:meta/meta.dart';\n\npart 'internet_state.dart';\n\nclass InternetCubit extends Cubit<InternetState> {\n  InternetCubit() : super(InternetInitial());\n}\n"
+        }
+    ]
+}

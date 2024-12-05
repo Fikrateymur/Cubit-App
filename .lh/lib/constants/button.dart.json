@@ -1,0 +1,18 @@
+{
+    "sourceFile": "lib/constants/button.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1733253530302,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1733253530302,
+            "name": "Commit-0",
+            "content": "import 'package:cubit_example/constants/theme/app_colors.dart';\r\nimport 'package:cubit_example/constants/theme/app_typography.dart';\r\nimport 'package:flutter/material.dart';\r\n\r\nclass Button extends StatelessWidget {\r\n  const Button(\r\n      {super.key,\r\n      required this.text,\r\n      required this.onPressed,\r\n      required this.width});\r\n\r\n  final String text;\r\n  final VoidCallback? onPressed;\r\n  final double width;\r\n\r\n  @override\r\n  Widget build(BuildContext context) {\r\n    return ElevatedButton(\r\n      onPressed: onPressed,\r\n      style: ElevatedButton.styleFrom(\r\n          backgroundColor: Colors.white,\r\n          shape: const RoundedRectangleBorder(borderRadius: BorderRadius.zero),\r\n          fixedSize: Size(width, 50),\r\n          elevation: 8,\r\n          shadowColor: AppColors.shadowColor),\r\n      child: Text(\r\n        text,\r\n        style: AppTypography.buttonText,\r\n      ),\r\n    );\r\n  }\r\n}\r\n"
+        }
+    ]
+}

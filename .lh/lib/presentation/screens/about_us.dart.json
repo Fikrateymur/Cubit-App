@@ -1,0 +1,18 @@
+{
+    "sourceFile": "lib/presentation/screens/about_us.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1733253409543,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1733253409543,
+            "name": "Commit-0",
+            "content": "\r\nimport 'package:cubit_example/constants/back_arrow.dart';\r\nimport 'package:cubit_example/constants/theme/app_colors.dart';\r\nimport 'package:cubit_example/constants/theme/app_pictures.dart';\r\nimport 'package:cubit_example/constants/theme/app_typography.dart';\r\nimport 'package:flutter/material.dart';\r\n\r\nclass AboutUs extends StatelessWidget {\r\n  const AboutUs({super.key});\r\n\r\n  @override\r\n  Widget build(BuildContext context) {\r\n    return Scaffold(\r\n      appBar: AppBar(\r\n        actions: [\r\n          Expanded(\r\n            child: Container(\r\n              alignment: Alignment.centerRight,\r\n              height: 60,\r\n              decoration: const BoxDecoration(\r\n                color: AppColors.veryLightGrey,\r\n                boxShadow: [\r\n                  BoxShadow(\r\n                    blurRadius: 4,\r\n                    color: AppColors.shadowColor,\r\n                    spreadRadius: 0,\r\n                  )\r\n                ],\r\n              ),\r\n              child: const BackArrow(\r\n                radius: 26,\r\n                icon: Icon(\r\n                  color: AppColors.baseRed,\r\n                  Icons.cancel_outlined,\r\n                  size: 34,\r\n                ),\r\n              ),\r\n            ),\r\n          ),\r\n        ],\r\n      ),\r\n      body: SingleChildScrollView(\r\n        child: Stack(children: <Widget>[\r\n          Container(\r\n            height: 823,\r\n            decoration: BoxDecoration(\r\n              image: DecorationImage(\r\n                colorFilter: ColorFilter.mode(\r\n                  Colors.white.withOpacity(0.3),\r\n                  BlendMode.dstATop,\r\n                ),\r\n                image: const AssetImage(\r\n                  AppPictures.aboutUs,\r\n                ),\r\n                fit: BoxFit.fill,\r\n              ),\r\n            ),\r\n          ),\r\n          const Padding(\r\n            padding: EdgeInsets.only(left: 38, top: 73),\r\n            child: SizedBox(\r\n              width: 254,\r\n              height: 268,\r\n              child: Text(\r\n                \"About \\n\"\r\n                \"Us\",\r\n                style: AppTypography.aboutUs,\r\n              ),\r\n            ),\r\n          ),\r\n          Padding(\r\n            padding: const EdgeInsets.only(top: 365),\r\n            child: Container(\r\n              width: 323,\r\n              height: 497,\r\n              color: Colors.white,\r\n              child: const Padding(\r\n                padding: EdgeInsets.only(\r\n                  left: 60,\r\n                  top: 61,\r\n                  right: 36,\r\n                ),\r\n                child: Text(\r\n                  'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Orci sapien nascetur vulputate ut convallis tincidunt imperdiet tortor. Pulvinar accumsan sit nunc tempor justo orci odio. Suspendisse aenean a morbi malesuada leo.',\r\n                  style: AppTypography.aboutUsText,\r\n                ),\r\n              ),\r\n            ),\r\n          )\r\n        ]),\r\n      ),\r\n    );\r\n  }\r\n}\r\n"
+        }
+    ]
+}

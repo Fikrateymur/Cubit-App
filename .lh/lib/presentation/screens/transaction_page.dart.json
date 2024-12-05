@@ -1,0 +1,30 @@
+{
+    "sourceFile": "lib/presentation/screens/transaction_page.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 3,
+            "patches": [
+                {
+                    "date": 1733255492753,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1733255499215,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,4 @@\n-import 'package:e_commerce/constants/back_arrow.dart';\r\n-import 'package:e_commerce/constants/transaction_row.dart';\r\n-import 'package:e_commerce/theme/app_colors.dart';\r\n-import 'package:e_commerce/theme/app_typography.dart';\r\n import 'package:flutter/material.dart';\r\n import 'package:intl/intl.dart';\r\n \r\n class TransactionPage extends StatelessWidget {\r\n"
+                },
+                {
+                    "date": 1733255516854,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,7 @@\n+import 'package:cubit_example/constants/back_arrow.dart';\r\n+import 'package:cubit_example/constants/theme/app_colors.dart';\r\n+import 'package:cubit_example/constants/theme/app_typography.dart';\r\n import 'package:flutter/material.dart';\r\n import 'package:intl/intl.dart';\r\n \r\n class TransactionPage extends StatelessWidget {\r\n"
+                },
+                {
+                    "date": 1733255619371,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,8 @@\n import 'package:cubit_example/constants/back_arrow.dart';\r\n import 'package:cubit_example/constants/theme/app_colors.dart';\r\n import 'package:cubit_example/constants/theme/app_typography.dart';\r\n+import 'package:cubit_example/constants/transaction_row.dart';\r\n import 'package:flutter/material.dart';\r\n import 'package:intl/intl.dart';\r\n \r\n class TransactionPage extends StatelessWidget {\r\n"
+                }
+            ],
+            "date": 1733255492753,
+            "name": "Commit-0",
+            "content": "import 'package:e_commerce/constants/back_arrow.dart';\r\nimport 'package:e_commerce/constants/transaction_row.dart';\r\nimport 'package:e_commerce/theme/app_colors.dart';\r\nimport 'package:e_commerce/theme/app_typography.dart';\r\nimport 'package:flutter/material.dart';\r\nimport 'package:intl/intl.dart';\r\n\r\nclass TransactionPage extends StatelessWidget {\r\n  const TransactionPage({super.key});\r\n\r\n  @override\r\n  Widget build(BuildContext context) {\r\n    DateTime now = DateTime.now();\r\n    DateTime date = DateTime(now.year, now.month, now.day);\r\n\r\n    return Scaffold(\r\n      backgroundColor: AppColors.veryLightGrey,\r\n      body: Padding(\r\n        padding: const EdgeInsets.only(\r\n          top: 42,\r\n          left: 30,\r\n        ),\r\n        child: Column(\r\n          crossAxisAlignment: CrossAxisAlignment.start,\r\n          children: [\r\n            const Row(\r\n              children: [\r\n                BackArrow(\r\n                  radius: 21,\r\n                  icon: Icon(\r\n                    color: AppColors.baseRed,\r\n                    Icons.arrow_back,\r\n                    size: 34,\r\n                  ),\r\n                ),\r\n                SizedBox(width: 44),\r\n                Text(\r\n                  'Transactions',\r\n                  style: AppTypography.ourBranchesTitle,\r\n                ),\r\n              ],\r\n            ),\r\n            const SizedBox(height: 55),\r\n            TransactionRow(\r\n              text: 'Lorem AZN',\r\n              number: '1',\r\n              date: DateFormat('yyyy-MM-dd').format(date),\r\n            ),\r\n            const SizedBox(height: 32),\r\n            TransactionRow(\r\n              text: 'Lorem AZN',\r\n              number: '2',\r\n              date: DateFormat('yyyy-MM-dd').format(date),\r\n            ),\r\n            const SizedBox(height: 32),\r\n            TransactionRow(\r\n              text: 'Lorem AZN',\r\n              number: '3',\r\n              date: DateFormat('yyyy-MM-dd').format(date),\r\n            ),\r\n            const SizedBox(height: 32),\r\n            TransactionRow(\r\n              text: 'Lorem AZN',\r\n              number: '4',\r\n              date: DateFormat('yyyy-MM-dd').format(date),\r\n            ),\r\n          ],\r\n        ),\r\n      ),\r\n    );\r\n  }\r\n}\r\n"
+        }
+    ]
+}
